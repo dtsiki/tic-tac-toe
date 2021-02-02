@@ -1,0 +1,95 @@
+@import './../../../styles/base//variables';
+
+.message {
+    color: $bg-color;
+    text-align: center;
+    margin: 40px 10px 10px 10px;
+    border-radius: $border-radius-primary;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: $accent-color;
+
+    &__title {
+        border-radius: $border-radius-primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background-color: $accent-color;
+        color: $bg-color;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    &__content {
+        width: 100%;
+        border: 1px solid $accent-color;
+        margin-top: 70px;
+        padding: 20px;
+        border-radius: 0 0 $border-radius-primary $border-radius-primary;
+        background-color: $bg-color;
+        color: $accent-color;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -14px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 15px 15px 15px;
+        border-color: transparent transparent $accent-color transparent;
+    }
+
+    &--success {
+        background-color: $accent-color;
+
+        &::before {
+            border-color: transparent transparent $accent-color transparent;
+        }
+    }
+
+    &--error {
+        background-color: $text-color;
+
+        &::before {
+            border-color: transparent transparent $text-color transparent;
+        }
+
+        .message__title {
+            background-color: $text-color;
+            color: $white-darker;
+        }
+
+        .message__content {
+            border-color: $text-color;
+            background-color: $bg-color;
+            color: $text-color;
+        }
+    }
+
+    &--info {
+        background-color: $white-darker;
+        color: $text-color;
+
+        &::before {
+            border-color: transparent transparent $white-darker transparent;
+        }
+
+        .message__title {
+            background-color: $white-darker;
+            color: $text-color;
+        }
+
+        .message__content {
+            border-color: $white-darker;
+            background-color: $bg-color;
+            color: $accent-color;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import './../../../styles/utils/mixins';
+
+.icon {
+    svg {
+        @include object-fit;
+        @include object-absolute;
+    }
+}

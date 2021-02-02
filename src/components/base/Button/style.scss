@@ -1,0 +1,41 @@
+@import './../../../styles/base/variables';
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: 16px;
+    border-radius: $border-radius-secondary;
+    transition: $transition;
+    cursor: pointer;
+
+    + .button {
+        margin-left: 5px;
+    }
+
+    &--primary {
+        background-color: $accent-color;
+        color: $button-color;
+        border-color: $accent-color;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color-active;
+        }
+    }
+
+    &--secondary {
+        color: $accent-color;
+        border-color: $light-color;
+        background-color: $light-color;
+
+        &:hover,
+        &:focus {
+            color: $accent-color-active;
+            background-color: $button-color-secondary;
+            border-color: $button-color-secondary;
+        }
+    }
+}

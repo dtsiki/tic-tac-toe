@@ -1,0 +1,100 @@
+@font-face {
+    font-family: Proxima;
+    src: local(Proxima-Sort), url(../../assets/fonts/Proxima/ProximaSoft-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: Proxima;
+    src: local(Proxima-Sort), url(../../assets/fonts/Proxima/ProximaSoft-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: Proxima;
+    src: local(Proxima-Sort), url(../../assets/fonts/Proxima/ProximaSoft-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: Proxima;
+    src: local(Proxima-Sort), url(../../assets/fonts/Proxima/ProximaSoft-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: $font;
+    font-weight: bold;
+
+    &--h1 {
+        font-size: 40px;
+        color: $accent-color;
+    }
+
+    &--h2,
+    &--h3,
+    &--h4,
+    &--h5,
+    &--h6 {
+        color: $text-color;
+    }
+
+    &--h2 {
+        font-size: 30px;
+    }
+
+    &--h3 {
+        font-size: 26px;
+    }
+
+    &--h4 {
+        font-size: 24px;
+    }
+
+    &--h5 {
+        font-size: 20px;
+    }
+
+    &--h6 {
+        font-size: 18px;
+    }
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1;
+    color: $text-color;
+    text-align: right;
+    margin: 0;
+
+    &--center {
+        text-align: center;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+    &--justify {
+        text-align: justify;
+    }
+
+    &--accent {
+        color: $accent-color;
+    }
+
+    &--light {
+        color: $light-color;
+    }
+}

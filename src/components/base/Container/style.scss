@@ -1,0 +1,92 @@
+@import './../../../styles/utils/breakpoints';
+@import './../../../styles/utils/mixins';
+@import './../../../styles/base/variables';
+
+.container {
+    background-color: transparent;
+    padding: 20px;
+    margin: 10px;
+    border-radius: $border-radius-primary;
+    border: 1px solid $light-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include sm {
+        padding: 40px;
+    }
+
+    &--active {
+        border-color: $accent-color;
+    }
+
+    &-content {
+        padding-bottom: 10px;
+
+        &--has-title {
+            margin-top: 80px;
+
+            @include sm {
+                margin-top: 70px;
+            }
+        }
+    }
+
+    &-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        text-align: center;
+        border-radius: $border-radius-primary $border-radius-primary 0 0;
+        background-color: $light-color;
+    }
+
+    &-control {
+        position: absolute;
+
+        &--bottom {
+            bottom: -$container-buttom-half-size;
+        }
+
+        &--right {
+            top: -$container-buttom-half-size;
+            right: -$container-buttom-half-size;
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $container-buttom-size;
+        height: $container-buttom-size;
+        border-radius: 100%;
+        background-color: $accent-color;
+        border: 0;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color-active;
+        }
+
+        &__label {
+            @include visually-hidden;
+        }
+
+        &__icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            position: relative;
+
+            svg {
+                color: $bg-color;
+            }
+        }
+    }
+}

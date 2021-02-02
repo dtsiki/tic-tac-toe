@@ -1,0 +1,22 @@
+
+@import './colors';
+
+$font: Proxima, sans-serif;
+$transition: 0.3s;
+$border-radius-primary: 17px;
+$border-radius-secondary: 10px;
+
+$bg-color: $white;
+$text-color: $black;
+$accent-color: $violet;
+$accent-color-active: $violet-darker;
+$light-color: $white-violet;
+$button-color: $white-darker;
+$button-color-secondary: $white-pink;
+$radio-button-bg-color: $white-darker;
+$radio-button-bg-color-active: $white-violet;
+
+$board-size: 240px;
+$cell-size: 80px;
+$container-buttom-size: 34px;
+$container-buttom-half-size: 17px;
